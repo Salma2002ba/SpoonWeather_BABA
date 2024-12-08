@@ -1,0 +1,93 @@
+# Spoon Project
+
+This project demonstrates how to use the **Spoon** library for code transformation, specifically focusing on transforming `if` conditions and converting `for` loops to `while` loops.
+
+**Created by Salma BABA**  
+
+## Requirements
+
+Before running the project, make sure you have the following installed:
+
+- **Java** (JDK 11 or higher)
+- **Maven** (for building and running the project)
+- **Spoon** library (automatically included via Maven)
+
+## Setup Instructions
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Salma2002ba/SpoonWeather_BABA.git
+    cd SpoonWeather_BABA
+    ```
+
+2. **Install Dependencies**:
+    - Navigate to the project root directory and install all dependencies using Maven:
+    ```bash
+    mvn clean compile
+    ```
+
+3. **Run the Transformation**:
+    - Execute the Spoon transformation to process the code in `WeatherAdvisor.java` and output the transformed version:
+    ```bash
+    mvn exec:java -Dexec.mainClass="com.example.spoon.SpoonWeather"
+    ```
+
+    This will output something like:
+    ```
+    ========== SPOON TRANSFORMATION STARTED ==========
+    ========== SPOON TRANSFORMATION COMPLETED ==========
+    ```
+
+4. **Run Tests**:
+    - After performing the transformation, you can run the tests to compare the original and transformed versions. The tests will check if the behavior remains the same between both versions.
+    ```bash
+    mvn test
+    ```
+
+    **Expected Output**:
+    ```
+    Original Version Output:
+    It's a cool day. Dress warmly.
+    The sky is not clear. Keep an umbrella just in case.
+    It's windy outside. Hold on to your hat!
+    No rain today. You can leave your umbrella at home.
+
+    Transformed Version Output:
+    It's a cool day. Dress warmly.
+    The sky is not clear. Keep an umbrella just in case.
+    It's windy outside. Hold on to your hat!
+    No rain today. You can leave your umbrella at home.
+
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+    ```
+
+## How It Works
+
+- **Transformation**:
+    - The project uses Spoon to analyze and transform Java code. In particular, the transformation:
+        - Inverts the condition in `if` statements and swaps their `then` and `else` blocks.
+        - Converts `for` loops into `while` loops.
+
+- **Test**:
+    - The test compares the original `WeatherAdvisor.java` with the transformed version to ensure that the output remains consistent between the two versions.
+
+## Troubleshooting
+
+- **SLF4J Warning**: You may encounter a warning related to SLF4J:
+    ```
+    SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+    ```
+    This is a known issue with the SLF4J logger, which doesn't impact the functionality of the Spoon transformations.
+
+
+
+## Project Structure
+
+- `src/`: Contains the source code, including:
+    - `main/java/com/example/spoon/SpoonWeather.java`: Contains the logic for performing the transformations.
+    - `test/java/com/example/spoon/WeatherAdvisor.java`: The original code to be transformed.
+    - `test/java/com/example/spoon/WeatherAdvisorTest.java`: Tests comparing the original and transformed code.
+  
+- `target/`: Contains the compiled files and the generated transformed files.
+
+- `spooned/`: Contains the transformed code after Spoon processes it.
