@@ -52,7 +52,7 @@ bash
 
     **Sample Test Output**:
     
-Original Version Output:
+    Original Version Output:
     It's a cool day. Dress warmly.
     The sky is not clear. Keep an umbrella just in case.
     It's windy outside. Hold on to your hat!
