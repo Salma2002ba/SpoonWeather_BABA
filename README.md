@@ -21,7 +21,6 @@ Before running the project, ensure you have the following installed:
     - Clone the repository to your local machine:
     ```bash
     git clone https://github.com/Salma2002ba/SpoonWeather_BABA.git
-    cd SpoonWeather_BABA
     
 
 2. **Install Dependencies**:
