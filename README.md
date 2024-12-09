@@ -115,6 +115,6 @@ Before running the project, ensure you have the following installed:
 
 
 - **Author**: Salma BABA
-- **Email**: salma.baba@gmail.com
+- **Email**: salma2002ba@gmail.com
 - **Linkedin**: www.linkedin.com/in/salma-baba-353aaa200
 - **GitHub**: [Salma2002ba](https://github.com/Salma2002ba)
