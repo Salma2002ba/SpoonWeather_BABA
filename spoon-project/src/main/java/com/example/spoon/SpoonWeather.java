@@ -47,7 +47,7 @@ public class SpoonWeather {
         // The prettyprint feature ensures the output looks nice and readable.
         launcher.prettyprint();
 
-        // Transformation is done! Let's celebrate :)
+        // Transformation is done!)
         System.out.println("========== SPOON TRANSFORMATION COMPLETED ==========");
     }
 }
